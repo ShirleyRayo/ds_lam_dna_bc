@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Adi2 LAM | Q1 2026 vs Q1 2025</title><style>
+:root { --bg:#0C1016; --card:#171E28; --card2:#202A36; --ink:#F7FAFF;
+  --muted:#ACB8C8; --line:#344152; --lime:#D7FF59; --blue:#7CA9FF;
+  --teal:#64E6C4; --red:#FF8E8E; --shade:#111821; }
+* { box-sizing: border-box; }
+html { background:var(--bg); scroll-behavior:smooth; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+.slide { display:none; margin:auto; min-height:100vh; max-width:1500px; padding:50px 5vw 76px; position:relative; }
+.slide.active { display:block; }
+.slide-top,.slide-bottom { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.slide-top { font-size:12px; letter-spacing:.17em; color:var(--muted); text-transform:uppercase; }
+.brand { font-size:18px; font-weight:900; color:var(--ink); letter-spacing:-.035em; }
+.brand span { color:var(--lime); }
+.slide-heading { margin:28px 0 22px; }
+.slide-heading h1 { margin:0 0 12px; font-size:clamp(28px,3.2vw,52px); letter-spacing:-.045em; line-height:1.08; font-weight:850; max-width:1180px; }
+.slide-heading p { margin:0; font-size:clamp(14px,1.3vw,18px); line-height:1.45; color:var(--muted); max-width:1040px; }
+.slide-bottom { border-top:1px solid var(--line); color:#8F9EB1; font-size:11px; letter-spacing:.04em; margin-top:26px; padding-top:16px; }
+.hero { background:radial-gradient(circle at 95% 0%, #263F2C 0%, transparent 40%),var(--bg); }
+.hero .slide-heading h1 { max-width:1100px; font-size:clamp(35px,4.3vw,65px); }
+.lime { color:var(--lime); } .blue-text{color:var(--blue)} .negative{color:var(--red)} .positive{color:var(--teal)}
+.metric-row { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:26px 0; }
+.metric { border:1px solid var(--line); background:var(--card); border-radius:16px; padding:22px; min-width:0; }
+.metric-label { text-transform:uppercase; color:var(--muted); font-size:11px; font-weight:750; letter-spacing:.09em; }
+.metric-value { font-weight:850; font-size:clamp(24px,3.2vw,44px); letter-spacing:-.05em; margin:12px 0 6px; white-space:nowrap; }
+.metric.good .metric-value { color:var(--teal); } .metric.warn .metric-value { color:var(--red); }
+.metric-sub { color:var(--muted); font-size:12px; line-height:1.4; }
+.statement { background:var(--lime); color:#142017; border-radius:15px; padding:20px 25px; font-size:clamp(16px,1.65vw,23px); line-height:1.35; letter-spacing:-.02em; font-weight:740; }
+
+/* Portada: planteamiento de la decisión, sin anticipar resultados. */
+.hyp-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin:23px 0 16px; }
+.hyp { background:var(--card); border:1px solid var(--line); border-radius:17px; padding:23px 25px; min-height:148px; }
+.hyp .hyp-id { display:inline-block; color:var(--lime); font-size:12px; letter-spacing:.14em; font-weight:850; margin-bottom:12px; }
+.hyp h2 { margin:0 0 8px; font-size:clamp(19px,1.65vw,25px); line-height:1.15; letter-spacing:-.025em; }
+.hyp p { color:var(--muted); line-height:1.45; font-size:13px; margin:0; }
+.open-decision { background:linear-gradient(95deg,#D7FF59,#C4EF64); color:#172119; padding:17px 24px; border-radius:14px; font-size:clamp(16px,1.45vw,21px); font-weight:780; line-height:1.35; }
+.open-decision strong { font-size:11px; text-transform:uppercase; letter-spacing:.12em; display:inline-block; margin-right:12px; opacity:.78; }
+.evidence-track { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:17px; }
+.evidence-item { background:#14202A; border:1px solid #293B48; border-radius:12px; padding:14px 16px; font-size:13px; line-height:1.35; color:#DEEBF2; }
+.evidence-item b { color:var(--lime); font-size:13px; margin-right:9px; }
+
+.two-col { display:grid; grid-template-columns: 1fr 1fr; gap:20px; }
+.panel { background:var(--card); border:1px solid var(--line); padding:20px 24px; border-radius:16px; }
+.panel-title { margin:0 0 18px; font-size:15px; font-weight:750; letter-spacing:-.01em; }
+.pair-group { margin-bottom:22px; } .pair-title { display:flex; align-items:center; justify-content:space-between; font-weight:800; margin-bottom:10px; }
+.pair-growth { color:var(--teal); font-size:15px; }
+.barline { display:grid; grid-template-columns:65px 1fr 106px; gap:12px; align-items:center; margin:9px 0; font-size:13px; }
+.bar-year { color:var(--muted); white-space:nowrap; } .bar-track { background:#303A48; height:17px; overflow:hidden; border-radius:5px; }
+.bar-fill { height:100%; border-radius:5px; } .bar-fill.retail { background:var(--lime); } .bar-fill.ecom { background:var(--blue); }
+.bar-fill.y2025 { opacity:.42; } .bar-amount { white-space:nowrap; text-align:right; font-variant-numeric:tabular-nums; }
+.legend { color:var(--muted); font-size:12px; }
+.table-scroll { overflow:auto; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th,td { border-bottom:1px solid #344152; padding:12px 10px; text-align:left; }
+th { color:var(--muted); font-size:11px; letter-spacing:.045em; text-transform:uppercase; font-weight:750; }
+.num { text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+.tag { font-size:10px; font-weight:850; letter-spacing:.08em; border-radius:5px; padding:4px 7px; background:#2A3749; color:#D3E1FF; }
+.tag.retail { background:#3D4422; color:#E3FF93; } .tag.ecom { background:#253860; color:#ACCBFF; }
+.callout { margin-top:14px; padding:13px 17px; background:#1E2B31; border-left:3px solid var(--lime); border-radius:4px; line-height:1.5; font-size:13px; }
+.mix { margin-bottom:18px; } .mix-header,.mix-detail { display:flex; justify-content:space-between; gap:12px; align-items:center; }
+.mix-header { font-size:15px; margin-bottom:8px; } .mix-header span { color:var(--muted); font-size:12px; }
+.mix-track { height:34px; border-radius:8px; display:flex; overflow:hidden; background:#303A48; }
+.mix-floor { background:var(--lime); } .mix-online { background:var(--blue); min-width:1px; }
+.mix-detail { margin-top:8px; font-size:11px; color:var(--muted); }
+.split-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; margin:22px 0; }
+.big-figure { background:var(--card2); padding:18px; border-radius:12px; }
+.big-figure .value { font-size:clamp(21px,2.3vw,34px); font-weight:850; white-space:nowrap; }
+.big-figure small { display:block; color:var(--muted); margin-top:9px; font-size:12px; line-height:1.4; }
+.store-columns { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.store-row { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(90px,1fr) 100px; gap:9px; align-items:center; padding:8px 0; border-bottom:1px solid #2C3948; }
+.store-label { font-size:11px; min-width:0; } .store-label b { display:block; overflow-wrap:anywhere; } .store-label span { display:inline-block; margin-top:3px; color:var(--muted); }
+.store-split { display:flex; height:14px; } .negative-side,.positive-side { width:50%; display:flex; align-items:center; }
+.negative-side { justify-content:flex-end; border-right:1px solid #8B96A5; } .positive-side { justify-content:flex-start; }
+.neg-bar,.pos-bar { height:100%; } .neg-bar { background:var(--red); border-radius:3px 0 0 3px; }
+.pos-bar { background:var(--teal); border-radius:0 3px 3px 0; }
+.store-value { text-align:right; font-size:11px; white-space:nowrap; font-variant-numeric:tabular-nums; } .store-value.gain { color:var(--teal); }.store-value.loss { color:var(--red); }
+.store-explain { grid-column:1 / -1; margin-top:-4px; color:var(--muted); font-size:10px; }
+.insight-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.insight { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:24px; }
+.insight .number { color:var(--lime); font-weight:850; font-size:13px; letter-spacing:.1em; }
+.insight h3 { font-size:23px; letter-spacing:-.03em; line-height:1.15; margin:18px 0; }
+.insight p { font-size:13px; line-height:1.5; color:#D9E2EF; margin:13px 0; } .insight p b { color:var(--lime); }
+.decision-grid { display:grid; grid-template-columns:1fr 1fr; gap:17px; }
+.step { display:flex; gap:15px; padding:14px 0; border-bottom:1px solid var(--line); }
+.step-n { font-size:24px; color:var(--lime); font-weight:850; width:38px; flex-shrink:0; }
+.step p { margin:4px 0 0; color:var(--muted); font-size:13px; line-height:1.5; }
+.footnote { padding:15px 18px; background:#1B2632; border-radius:10px; font-size:12px; line-height:1.5; color:#C2CFDC; }
+
+/* Evidencia cuantitativa nueva. */
+.mini-eyebrow { color:var(--lime); font-size:11px; font-weight:800; letter-spacing:.10em; text-transform:uppercase; }
+.context-banner { margin-top:14px; background:#1F2935; border-left:3px solid var(--lime); border-radius:7px; padding:11px 15px; font-size:12px; line-height:1.4; color:#E4EAF3; }
+.stat-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:14px 0; }
+.stat-tile { background:var(--card2); padding:13px 17px; border:1px solid #374250; border-radius:12px; }
+.stat-tile small { display:block; color:var(--muted); font-size:11px; line-height:1.35; }
+.stat-tile strong { display:block; font-size:24px; font-weight:850; margin:7px 0 4px; letter-spacing:-.025em; }
+.stats-2col { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.proof-list { padding:0; margin:10px 0 0; list-style:none; }
+.proof-list li { border-bottom:1px solid var(--line); padding:10px 0; line-height:1.42; font-size:12px; }
+.proof-list li:last-child {border-bottom:0}
+.proof-list b { color:var(--lime); }
+.questions-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.answer { border:1px solid var(--line); border-radius:16px; background:var(--card); padding:20px 23px; }
+.answer h2 { margin:0 0 12px; font-size:20px; letter-spacing:-.022em; }
+.answer .verdict { color:var(--lime); font-weight:800; font-size:16px; }
+.answer p { color:#DBE4EE; font-size:13px; line-height:1.5; margin:10px 0; }
+.answer .proof { margin-top:13px; background:#23313B; border-radius:8px; padding:12px 14px; font-size:12px; line-height:1.5; color:#E4ECF4; }
+.answer .proof strong { color:var(--teal); }
+.fineprint { font-size:11px; line-height:1.45; color:var(--muted); margin-top:10px; }
+.slide.tight { padding-top:28px; }
+.slide.tight .slide-heading { margin:17px 0 13px; }
+.slide.tight .panel { padding:14px 18px; }
+.slide.tight th,.slide.tight td { padding:8px 8px; font-size:12px; }
+.slide.tight .mix { margin-bottom:12px; }
+.slide.tight .split-grid { margin:12px 0; }
+@media(max-width:900px) { .stats-2col,.questions-grid,.stat-grid { grid-template-columns:1fr; } }
+@media print { .slide.tight { padding-top:19px; } .stat-tile strong { font-size:20px; } .answer { padding:14px; } .answer h2 { font-size:18px; } .answer p { font-size:11px; } }
+
+.annex table { font-size:12px; } .annex td,.annex th { padding:10px 7px; }
+.controls { position:fixed; right:22px; bottom:20px; display:flex; gap:8px; align-items:center; z-index:10; padding:7px 9px; border:1px solid #3B4C5C; background:#1C2631; border-radius:99px; box-shadow:0 10px 25px #0007; }
+.controls button { border:0; border-radius:50px; background:#314252; color:white; padding:9px 14px; font-weight:750; cursor:pointer; }
+.controls button:hover { background:var(--lime); color:#172018; }
+#counter { color:var(--muted); font-size:12px; min-width:44px; text-align:center; }
+/* La página de países necesita menos aire para mostrarse en pantalla completa. */
+.slide.compact { padding-top:26px; padding-bottom:38px; }
+.slide.compact .slide-heading { margin:17px 0 16px; }
+.slide.compact .panel { padding:14px 20px; }
+.slide.compact .pair-group { margin-bottom:12px; }
+.slide.compact .barline { margin:6px 0; }
+.slide.compact th,.slide.compact td { padding:8px 9px; }
+@media (max-width:900px) { .hyp-grid,.evidence-track { grid-template-columns:1fr; } .slide { padding:28px 4vw 95px; } .metric-row,.insight-grid,.split-grid { grid-template-columns:1fr; } .two-col,.store-columns,.decision-grid { grid-template-columns:1fr; } .metric-value { font-size:28px; } .mix-detail { flex-direction:column; align-items:flex-start; } }
+@media print {
+ @page { size:landscape; margin:0; }
+ html,body { background:var(--bg)!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+ .controls { display:none!important; }
+ .slide,.slide.active { display:block!important; width:100%; max-width:none; min-height:100vh; height:100vh; padding:28px 44px 36px; page-break-after:always; break-after:page; overflow:hidden; }
+ .slide-heading { margin:15px 0 12px; } .slide-heading h1 { font-size:34px; }
+ .slide-heading p { font-size:13px; } .hyp-grid { margin:15px 0 10px; gap:12px; } .hyp { padding:13px 17px; min-height:0; } .hyp .hyp-id { margin-bottom:6px; } .hyp h2 { font-size:19px; margin-bottom:5px; } .hyp p { font-size:11px; } .open-decision { padding:13px 18px; font-size:16px; } .evidence-track { margin-top:10px; } .evidence-item { padding:10px; font-size:11px; } .metric-row { margin:14px 0; }
+ .metric { padding:14px; } .metric-value { font-size:28px; } .panel { padding:14px; }
+ .insight { padding:14px; } .insight h3 { font-size:19px; } .insight p { font-size:12px; }
+ .store-row { padding:4px 0; } .slide-bottom { position:absolute; bottom:18px; left:44px; right:44px; margin:0; }
+}
+</style></head><body><main id="deck">
+<section class="slide hero active" id="s1">
+  <div class="slide-top"><span class="brand">ADI<span>2</span> / LAM</span>
+  <span class="section-label">Contexto / Pregunta de negocio · Q1 2026 VS. Q1 2025</span></div>
+  <header class="slide-heading"><h1>¿De dónde viene el crecimiento?<br><span class='lime'>¿Qué papel cumplen las tiendas?</span></h1><p>Adi2 considera reasignar inversión de tiendas físicas a ECOM. Contrastamos dos hipótesis con las ventas netas de Q1 2026 frente a Q1 2025, expresadas en EUR.</p></header>
+  <div class="hyp-grid"><article class="hyp"><span class="hyp-id">HIPÓTESIS 01</span><h2>El crecimiento viene principalmente de las compras online.</h2><p>¿Qué muestran las ventas netas y el crecimiento de Retail y ECOM por país?</p></article><article class="hyp"><span class="hyp-id">HIPÓTESIS 02</span><h2>Las tiendas físicas están perdiendo relevancia.</h2><p>¿Qué papel tienen las ventas presenciales y los pedidos online despachados desde tiendas?</p></article></div><div class="open-decision"><strong>Decisión a evaluar</strong>¿Conviene trasladar inversión de tiendas físicas hacia ECOM?</div><div class="evidence-track"><div class="evidence-item"><b>01</b> Ventas y crecimiento por canal y país</div><div class="evidence-item"><b>02</b> Contribución omnicanal y desempeño por tienda</div><div class="evidence-item"><b>03</b> Insights, riesgos y recomendación de inversión</div></div>
+  <footer class="slide-bottom"><span>Fuente de análisis: fact_sellout_performance.parquet · Colombia, México y Argentina</span><span>01 / 09</span></footer>
+</section>
+<section class="slide compact" id="s2">
+  <div class="slide-top"><span class="brand">ADI<span>2</span> / LAM</span>
+  <span class="section-label">Pregunta 1 / Canales y países · Q1 2026 VS. Q1 2025</span></div>
+  <header class="slide-heading"><h1>¿Cómo crecen Retail y ECOM?</h1><p>ECOM +13,91% vs. Retail +5,90%. La diferencia es consistente en Colombia, México y Argentina.</p></header>
+  <div class="two-col"><div class="panel"><h2 class="panel-title">Ventas por canal reportado</h2><div class="pair-group"><div class="pair-title">RETAIL<span class="pair-growth">+5,90%</span></div><div class="barline"><span class="bar-year">Q1 2025</span><div class="bar-track"><div class="bar-fill retail y2025" style="width:94.430%"></div></div><strong class="bar-amount">€203.110</strong></div><div class="barline"><span class="bar-year">Q1 2026</span><div class="bar-track"><div class="bar-fill retail y2026" style="width:100.000%"></div></div><strong class="bar-amount">€215.090</strong></div></div><div class="pair-group"><div class="pair-title">ECOM<span class="pair-growth">+13,91%</span></div><div class="barline"><span class="bar-year">Q1 2025</span><div class="bar-track"><div class="bar-fill ecom y2025" style="width:53.873%"></div></div><strong class="bar-amount">€115.876</strong></div><div class="barline"><span class="bar-year">Q1 2026</span><div class="bar-track"><div class="bar-fill ecom y2026" style="width:61.367%"></div></div><strong class="bar-amount">€131.993</strong></div></div><p class="legend">Barras claras: 2026 · barras atenuadas: 2025</p></div><div class="panel"><h2 class="panel-title">Diferencia de crecimiento</h2><div class="big-figure"><div class="value positive">+€16.117</div><small>Incremento de ECOM en el trimestre</small></div><br><div class="big-figure"><div class="value positive">+€11.980</div><small>Incremento de Retail; no está disminuyendo en ventas atribuidas</small></div></div></div><div class="panel" style="margin-top:16px"><h2 class="panel-title">Ventas netas por país y canal · EUR</h2><div class="table-scroll"><table><thead><tr><th>País</th><th>Canal</th><th class="num">Q1 2025</th><th class="num">Q1 2026</th><th class="num">Cambio EUR</th><th class="num">Cambio %</th></tr></thead><tbody><tr><td><b>Colombia</b></td><td><span class="tag retail">RETAIL</span></td><td class="num">€60.430,00</td><td class="num">€68.385,70</td><td class="num positive">+€7.955,70</td><td class="num positive">+13,17%</td></tr><tr><td><b>Colombia</b></td><td><span class="tag ecom">ECOM</span></td><td class="num">€33.180,10</td><td class="num">€39.712,00</td><td class="num positive">+€6.531,90</td><td class="num positive">+19,69%</td></tr><tr><td><b>México</b></td><td><span class="tag retail">RETAIL</span></td><td class="num">€101.041,40</td><td class="num">€104.104,30</td><td class="num positive">+€3.062,90</td><td class="num positive">+3,03%</td></tr><tr><td><b>México</b></td><td><span class="tag ecom">ECOM</span></td><td class="num">€53.634,70</td><td class="num">€58.587,90</td><td class="num positive">+€4.953,20</td><td class="num positive">+9,24%</td></tr><tr><td><b>Argentina</b></td><td><span class="tag retail">RETAIL</span></td><td class="num">€41.638,80</td><td class="num">€42.599,70</td><td class="num positive">+€960,90</td><td class="num positive">+2,31%</td></tr><tr><td><b>Argentina</b></td><td><span class="tag ecom">ECOM</span></td><td class="num">€29.061,20</td><td class="num">€33.693,50</td><td class="num positive">+€4.632,30</td><td class="num positive">+15,94%</td></tr></tbody></table></div></div>
+  <footer class="slide-bottom"><span>Canal reportado: pedidos online despachados por tiendas se atribuyen a RETAIL</span><span>02 / 09</span></footer>
+</section>
+<section class="slide tight" id="s3">
+  <div class="slide-top"><span class="brand">ADI<span>2</span> / LAM</span>
+  <span class="section-label">Pregunta 1 / Origen vs. atribución · Q1 2026 VS. Q1 2025</span></div>
+  <header class="slide-heading"><h1>¿Qué parte del comercio online depende de las tiendas?</h1><p>Separamos la compra originada online según dónde se despacha, y también el resultado Retail según su origen operativo.</p></header>
+  <div class="stats-2col"><div class="panel"><h2 class="panel-title">De las compras originadas online, ¿desde dónde se despachan?</h2><div class="mix"><div class="mix-header"><b>Q1 2025</b><span>Compras originadas online: €118.924</span></div><div class="mix-track"><div class="mix-floor" style="width:97.437%"></div><div class="mix-online" style="width:2.563%"></div></div><div class="mix-detail"><span>Centros de distribución: €115.876 (97,44%)</span><span>Tiendas: €3.048 (2,56%)</span></div></div><div class="mix"><div class="mix-header"><b>Q1 2026</b><span>Compras originadas online: €161.932</span></div><div class="mix-track"><div class="mix-floor" style="width:81.512%"></div><div class="mix-online" style="width:18.488%"></div></div><div class="mix-detail"><span>Centros de distribución: €131.993 (81,51%)</span><span>Tiendas: €29.939 (18,49%)</span></div></div></div><div class="panel"><h2 class="panel-title">¿De qué se compone Retail?</h2><div class="mix"><div class="mix-header"><b>Q1 2025</b><span>Total Retail €203.110,20</span></div><div class="mix-track"><div class="mix-floor" style="width:98.499%"></div><div class="mix-online" style="width:1.501%"></div></div><div class="mix-detail"><span>Presencial: €200.062,40 (98,50%)</span><span>Online desde tienda: €3.047,80 (1,50%)</span></div></div><div class="mix"><div class="mix-header"><b>Q1 2026</b><span>Total Retail €215.089,70</span></div><div class="mix-track"><div class="mix-floor" style="width:86.081%"></div><div class="mix-online" style="width:13.919%"></div></div><div class="mix-detail"><span>Presencial: €185.151,00 (86,08%)</span><span>Online desde tienda: €29.938,70 (13,92%)</span></div></div></div></div><div class="stat-grid"><div class="stat-tile"><small>Participación de tienda en compras online · 2026</small><strong class="lime">18,49%</strong><small>Frente al 2,56% de Q1 2025</small></div><div class="stat-tile"><small>Cambio de ventas presenciales</small><strong class="negative">−€14.911</strong><small>−7,45% frente a Q1 2025</small></div><div class="stat-tile"><small>Cambio de ventas online despachadas por tienda</small><strong class="positive">+€26.891</strong><small>Crece el papel del fulfillment propio</small></div></div><div class="context-banner"><b>Importante:</b> la proporción se mide sobre <b>ventas netas en EUR</b>, no sobre número de pedidos. Online = ECOM (centro de distribución) + Retail (despacho desde tienda). El canal de reporte y el origen de la compra no son lo mismo.</div>
+  <footer class="slide-bottom"><span>Fuente: tabla final · porcentajes sobre ventas netas EUR · no se cuentan pedidos individuales</span><span>03 / 09</span></footer>
+</section>
+<section class="slide " id="s4">
+  <div class="slide-top"><span class="brand">ADI<span>2</span> / LAM</span>
+  <span class="section-label">Pregunta 2 / Desempeño por tienda · Q1 2026 VS. Q1 2025</span></div>
+  <header class="slide-heading"><h1>¿Qué tiendas explican el resultado de Retail?</h1><p>Variación absoluta en EUR; cada tienda se descompone en venta presencial y online despachado desde su inventario.</p></header>
+  <div class="store-columns"><div class="panel"><h2 class="panel-title">Mayor contribución al crecimiento</h2><div class="store-row"><div class="store-label"><b>Adi2 Store Unicentro</b><span>CO</span></div><div class="store-split"><div class="negative-side"></div><div class="positive-side"><div class="pos-bar" style="width:100.00%"></div></div></div><strong class="store-value gain">+€9.930</strong><div class="store-explain">Piso +€3.048 · Online +€6.882</div></div><div class="store-row"><div class="store-label"><b>Adi2 Store Galerias</b><span>MX</span></div><div class="store-split"><div class="negative-side"></div><div class="positive-side"><div class="pos-bar" style="width:40.94%"></div></div></div><strong class="store-value gain">+€4.066</strong><div class="store-explain">Piso −€880 · Online +€4.946</div></div><div class="store-row"><div class="store-label"><b>Adi2 Store Alto Palermo</b><span>AR</span></div><div class="store-split"><div class="negative-side"></div><div class="positive-side"><div class="pos-bar" style="width:39.88%"></div></div></div><strong class="store-value gain">+€3.960</strong><div class="store-explain">Piso −€1.811 · Online +€5.771</div></div><div class="store-row"><div class="store-label"><b>Adi2 Outlet Antara</b><span>MX</span></div><div class="store-split"><div class="negative-side"></div><div class="positive-side"><div class="pos-bar" style="width:38.48%"></div></div></div><strong class="store-value gain">+€3.821</strong><div class="store-explain">Piso −€1.912 · Online +€5.732</div></div><div class="store-row"><div class="store-label"><b>Adi2 Brand Center Titan</b><span>CO</span></div><div class="store-split"><div class="negative-side"></div><div class="positive-side"><div class="pos-bar" style="width:12.41%"></div></div></div><strong class="store-value gain">+€1.232</strong><div class="store-explain">Piso −€430 · Online +€1.662</div></div><div class="store-row"><div class="store-label"><b>Adi2 Outlet Toreo</b><span>MX</span></div><div class="store-split"><div class="negative-side"></div><div class="positive-side"><div class="pos-bar" style="width:5.12%"></div></div></div><strong class="store-value gain">+€508</strong><div class="store-explain">Piso −€1.388 · Online +€1.896</div></div></div><div class="panel"><h2 class="panel-title">Crecimiento limitado o caída</h2><div class="store-row"><div class="store-label"><b>Adi2 Store Andino</b><span>CO</span></div><div class="store-split"><div class="negative-side"><div class="neg-bar" style="width:8.32%"></div></div><div class="positive-side"></div></div><strong class="store-value loss">−€826</strong><div class="store-explain">Piso −€826 · Online €0</div></div><div class="store-row"><div class="store-label"><b>Adi2 Brand Center Solar</b><span>AR</span></div><div class="store-split"><div class="negative-side"><div class="neg-bar" style="width:11.71%"></div></div><div class="positive-side"></div></div><strong class="store-value loss">−€1.163</strong><div class="store-explain">Piso −€1.163 · Online €0</div></div><div class="store-row"><div class="store-label"><b>Adi2 Store Unicenter</b><span>AR</span></div><div class="store-split"><div class="negative-side"><div class="neg-bar" style="width:18.49%"></div></div><div class="positive-side"></div></div><strong class="store-value loss">−€1.836</strong><div class="store-explain">Piso −€1.836 · Online €0</div></div><div class="store-row"><div class="store-label"><b>Adi2 Store Perisur</b><span>MX</span></div><div class="store-split"><div class="negative-side"><div class="neg-bar" style="width:22.81%"></div></div><div class="positive-side"></div></div><strong class="store-value loss">−€2.265</strong><div class="store-explain">Piso −€2.265 · Online €0</div></div><div class="store-row"><div class="store-label"><b>Adi2 Outlet Oviedo</b><span>CO</span></div><div class="store-split"><div class="negative-side"><div class="neg-bar" style="width:23.97%"></div></div><div class="positive-side"></div></div><strong class="store-value loss">−€2.380</strong><div class="store-explain">Piso −€2.380 · Online €0</div></div><div class="store-row"><div class="store-label"><b>Adi2 Brand Center Andares</b><span>MX</span></div><div class="store-split"><div class="negative-side"><div class="neg-bar" style="width:30.89%"></div></div><div class="positive-side"></div></div><strong class="store-value loss">−€3.067</strong><div class="store-explain">Piso −€3.067 · Online €0</div></div></div></div><div class="callout"><b>Ejemplo:</b> Adi2 Store Unicentro (CO) aporta +€9.930: piso +€3.048 y despacho online +€6.882. En contraste, Adi2 Brand Center Andares registra −€3.067.</div>
+  <footer class="slide-bottom"><span>Las 12 tiendas están incluidas · mayor detalle por período en el anexo</span><span>04 / 09</span></footer>
+</section>
+<section class="slide tight" id="s5">
+  <div class="slide-top"><span class="brand">ADI<span>2</span> / LAM</span>
+  <span class="section-label">Análisis / Mercados · Q1 2026 VS. Q1 2025</span></div>
+  <header class="slide-heading"><h1>Colombia acelera; México conserva el mayor volumen.</h1><p>Para explicar por qué difieren los países distinguimos tamaño, crecimiento y componentes de la variación.</p></header>
+  <div class="panel"><h2 class="panel-title">Tamaño, ritmo y contribución · ventas netas EUR</h2><div class="table-scroll"><table><thead><tr><th>Mercado</th><th class="num">Q1 2025</th><th class="num">Q1 2026</th><th class="num">Δ EUR</th><th class="num">Δ %</th><th class="num">Aporte al Δ LAM</th></tr></thead><tbody><tr><td><b>México</b></td><td class="num">€154.676</td><td class="num">€162.692</td><td class="num positive">+€8.016</td><td class="num">+5,18%</td><td class="num">28,53%</td></tr><tr><td><b>Colombia</b></td><td class="num">€93.610</td><td class="num">€108.098</td><td class="num positive">+€14.488</td><td class="num">+15,48%</td><td class="num">51,56%</td></tr><tr><td><b>Argentina</b></td><td class="num">€70.700</td><td class="num">€76.293</td><td class="num positive">+€5.593</td><td class="num">+7,91%</td><td class="num">19,91%</td></tr></tbody></table></div></div><div class="panel" style="margin-top:13px"><h2 class="panel-title">Qué componentes explican el cambio de cada país · Δ EUR</h2><div class="table-scroll"><table><thead><tr><th>País</th><th class="num">Presencial</th><th class="num">Online desde DC</th><th class="num">Online desde tienda</th><th class="num">Δ neto país</th><th class="num">Δ Footwear*</th></tr></thead><tbody><tr><td><b>Colombia</b></td><td class="num negative">−€589</td><td class="num positive">+€6.532</td><td class="num positive">+€8.545</td><td class="num"><b>+€14.488</b></td><td class="num">+€14.343</td></tr><tr><td><b>México</b></td><td class="num negative">−€9.512</td><td class="num positive">+€4.953</td><td class="num positive">+€12.575</td><td class="num"><b>+€8.016</b></td><td class="num">+€3.870</td></tr><tr><td><b>Argentina</b></td><td class="num negative">−€4.810</td><td class="num positive">+€4.632</td><td class="num positive">+€5.771</td><td class="num"><b>+€5.593</b></td><td class="num">+€3.420</td></tr></tbody></table></div><p class="fineprint">* Footwear es otra descomposición (por producto): no se suma a los tres componentes por origen.</p></div><div class="context-banner"><b>Lectura:</b> México vende más en términos absolutos (€162.692), pero Colombia registra el mayor crecimiento (+15,48%). En Colombia, Footwear aporta +€14.343 al incremento, mientras el crecimiento de pedidos online supera la caída presencial. La tabla demuestra las contribuciones, no la causa comercial última.</div>
+  <footer class="slide-bottom"><span>Fuente: tabla final · Δ = Q1 2026 menos Q1 2025 · no inferir causalidad de marketing o costos</span><span>05 / 09</span></footer>
+</section>
+<section class="slide tight" id="s6">
+  <div class="slide-top"><span class="brand">ADI<span>2</span> / LAM</span>
+  <span class="section-label">Evidencia / Portafolio y devoluciones · Q1 2026 VS. Q1 2025</span></div>
+  <header class="slide-heading"><h1>El portafolio impulsa ventas; las devoluciones presionan el neto.</h1><p>Las siguientes cifras respaldan los insights: crecimiento por división y devolución monetaria por canal.</p></header>
+  <div class="panel"><h2 class="panel-title">Divisiones de producto · ventas netas EUR</h2><div class="table-scroll"><table><thead><tr><th>División</th><th class="num">Q1 2025</th><th class="num">Q1 2026</th><th class="num">Δ EUR</th><th class="num">Δ %</th><th class="num">Aporte al crecimiento LAM</th></tr></thead><tbody><tr><td><b>FOOTWEAR</b></td><td class="num">€207.652</td><td class="num">€229.285</td><td class="num positive">+€21.633</td><td class="num">+10,42%</td><td class="num">+77,00%</td></tr><tr><td><b>APPAREL</b></td><td class="num">€100.969</td><td class="num">€108.029</td><td class="num positive">+€7.060</td><td class="num">+6,99%</td><td class="num">+25,13%</td></tr><tr><td><b>ACCESSORIES</b></td><td class="num">€10.366</td><td class="num">€9.769</td><td class="num negative">−€597</td><td class="num">−5,76%</td><td class="num">−2,12%</td></tr></tbody></table></div></div><div class="panel" style="margin-top:14px"><h2 class="panel-title">Devoluciones por canal · importe devuelto / venta bruta</h2><div class="table-scroll"><table><thead><tr><th>Canal</th><th>Periodo</th><th class="num">Venta bruta</th><th class="num">Devuelto EUR</th><th class="num">Ratio de devolución</th></tr></thead><tbody><tr><td><span class="tag retail">RETAIL</span></td><td>Q1 2025</td><td class="num">€208.944</td><td class="num">€5.834</td><td class="num"><b>2,79%</b></td></tr><tr><td><span class="tag retail">RETAIL</span></td><td>Q1 2026</td><td class="num">€225.020</td><td class="num">€9.930</td><td class="num"><b>4,41%</b></td></tr><tr><td><span class="tag ecom">ECOM</span></td><td>Q1 2025</td><td class="num">€126.813</td><td class="num">€10.937</td><td class="num"><b>8,62%</b></td></tr><tr><td><span class="tag ecom">ECOM</span></td><td>Q1 2026</td><td class="num">€144.373</td><td class="num">€12.380</td><td class="num"><b>8,57%</b></td></tr></tbody></table></div><p class="fineprint">El ratio compara importes monetarios y no equivale al porcentaje de productos devueltos.</p></div><div class="context-banner"><b>Dos señales:</b> Footwear aporta +€21.633 (77,00% del crecimiento regional). La tasa monetaria de devolución de Retail pasa de 2,79% a 4,41% (+1,62 pp). No conocemos todavía las causas de estas devoluciones.</div>
+  <footer class="slide-bottom"><span>Fuente: tabla final · ventas netas, brutas y devoluciones convertidas a EUR</span><span>06 / 09</span></footer>
+</section>
+<section class="slide " id="s7">
+  <div class="slide-top"><span class="brand">ADI<span>2</span> / LAM</span>
+  <span class="section-label">Tres insights / Observación · significado · acción · Q1 2026 VS. Q1 2025</span></div>
+  <header class="slide-heading"><h1>Dónde acelerar, qué potenciar y qué controlar.</h1><p>Cada acción se basa en un cambio cuantificado y distingue hechos de hipótesis.</p></header>
+  <div class="insight-grid"><article class="insight"><div class="number">INSIGHT 01 · MERCADO</div><h3>Colombia aporta más al crecimiento</h3><p><b>Observación:</b> +€14.488 (51,56% del crecimiento neto LAM).</p><p><b>Significado:</b> el mercado tiene un crecimiento elevado, no el mayor volumen: México sigue liderando las ventas.</p><p><b>Acción:</b> analizar los artículos Footwear y la operación online de Colombia; probar iniciativas y medir margen antes de expandir.</p></article><article class="insight"><div class="number">INSIGHT 02 · PORTAFOLIO</div><h3>FOOTWEAR lidera el incremento</h3><p><b>Observación:</b> +€21.633 (77,00% del aumento LAM).</p><p><b>Significado:</b> una división concentra gran parte del crecimiento neto.</p><p><b>Acción:</b> priorizar revisión de disponibilidad, surtido y margen de sus referencias más relevantes.</p></article><article class="insight"><div class="number">INSIGHT 03 · DEVOLUCIONES</div><h3>Devolución monetaria Retail aumenta</h3><p><b>Observación:</b> 2,79% → 4,41%, un cambio de +1,62 pp.</p><p><b>Significado:</b> una mayor porción de ventas brutas se descuenta antes de llegar al neto.</p><p><b>Acción:</b> auditar motivos de devolución por tienda, artículo y tipo de despacho antes de escalar.</p></article></div><div class="context-banner"><b>Los tres insights parten de la evidencia de las pantallas anteriores:</b> no son afirmaciones basadas únicamente en la narrativa.</div>
+  <footer class="slide-bottom"><span>Los resultados de mercado, división y devolución se muestran en las pantallas 5 y 6</span><span>07 / 09</span></footer>
+</section>
+<section class="slide tight" id="s8">
+  <div class="slide-top"><span class="brand">ADI<span>2</span> / LAM</span>
+  <span class="section-label">Respuestas oficiales / Decisión de inversión · Q1 2026 VS. Q1 2025</span></div>
+  <header class="slide-heading"><h1>¿Qué nos dicen los datos y qué debe decidir Adi2?</h1><p>Respuestas explícitas a las dos preguntas de liderazgo, respaldadas por los resultados de las seis pantallas de evidencia.</p></header>
+  <div class="questions-grid"><article class="answer"><div class="mini-eyebrow">PREGUNTA OFICIAL 01</div><h2>¿Los datos respaldan la lectura de liderazgo?</h2><div class="verdict">Parcialmente.</div><p>ECOM reportado crece +13,91% y Retail también crece +5,90%. La venta presencial cae −7,45%, pero la red de tiendas despacha una parte creciente de las compras online.</p><div class="proof"><strong>Evidencia en EUR:</strong> ECOM +€16.117 · Retail +€11.980 · Presencial −€14.911.<br>La participación de tiendas en compras originadas online pasa de 2,56% a 18,49%.</div></article><article class="answer"><div class="mini-eyebrow">PREGUNTA OFICIAL 02</div><h2>¿Qué tiendas impulsan Retail y qué lo explica?</h2><div class="verdict">El aporte se concentra en tiendas con capacidad omnicanal.</div><p>Lideran: Adi2 Store Unicentro (+€9.930); Adi2 Store Galerias (+€4.066); Adi2 Store Alto Palermo (+€3.960). En el caso de Adi2 Store Unicentro, el cambio combina +€3.048 de venta presencial y +€6.882 de despacho online.</p><div class="proof"><strong>Contrapesos:</strong> Adi2 Brand Center Andares (−€3.067); Adi2 Outlet Oviedo (−€2.380). Conviene estudiar cada establecimiento, no aplicar una decisión única a todos.</div></article></div><div class="context-banner"><b>Decisión:</b> no trasladar inversión de Retail a ECOM de forma generalizada. Evaluar productividad presencial, capacidad de despacho, márgenes, devoluciones y costos por tienda. Este análisis demuestra contribución a ventas, <b>no</b> rentabilidad.</div>
+  <footer class="slide-bottom"><span>Fuente: fact_sellout_performance.parquet · Q1 2026 frente a Q1 2025 · EUR</span><span>08 / 09</span></footer>
+</section>
+<section class="slide " id="s9">
+  <div class="slide-top"><span class="brand">ADI<span>2</span> / LAM</span>
+  <span class="section-label">Anexo / Validación · Q1 2026 VS. Q1 2025</span></div>
+  <header class="slide-heading"><h1>Detalle de las 12 tiendas.</h1><p>Material de respaldo para preguntas del liderazgo; la suma de sus contribuciones coincide con el cambio total Retail.</p></header>
+  <div class="panel annex"><h2 class="panel-title">Las 12 tiendas · ventas netas EUR y descomposición del cambio</h2><div class="table-scroll"><table><thead><tr><th>País</th><th>Tienda</th><th class="num">Q1 2025</th><th class="num">Q1 2026</th><th class="num">Δ total</th><th class="num">Δ presencial</th><th class="num">Δ online desde tienda</th></tr></thead><tbody><tr><td>Colombia</td><td><b>Adi2 Store Unicentro</b></td><td class="num">€11.984,40</td><td class="num">€21.914,60</td><td class="num positive">+€9.930,20</td><td class="num">+€3.047,90</td><td class="num">+€6.882,30</td></tr><tr><td>México</td><td><b>Adi2 Store Galerias</b></td><td class="num">€19.153,80</td><td class="num">€23.219,60</td><td class="num positive">+€4.065,80</td><td class="num">−€880,50</td><td class="num">+€4.946,30</td></tr><tr><td>Argentina</td><td><b>Adi2 Store Alto Palermo</b></td><td class="num">€13.932,80</td><td class="num">€17.893,00</td><td class="num positive">+€3.960,20</td><td class="num">−€1.810,90</td><td class="num">+€5.771,10</td></tr><tr><td>México</td><td><b>Adi2 Outlet Antara</b></td><td class="num">€15.547,20</td><td class="num">€19.368,00</td><td class="num positive">+€3.820,80</td><td class="num">−€1.911,50</td><td class="num">+€5.732,30</td></tr><tr><td>Colombia</td><td><b>Adi2 Brand Center Titan</b></td><td class="num">€15.394,80</td><td class="num">€16.626,80</td><td class="num positive">+€1.232,00</td><td class="num">−€430,50</td><td class="num">+€1.662,50</td></tr><tr><td>México</td><td><b>Adi2 Outlet Toreo</b></td><td class="num">€21.977,70</td><td class="num">€22.486,20</td><td class="num positive">+€508,50</td><td class="num">−€1.387,90</td><td class="num">+€1.896,40</td></tr><tr><td>Colombia</td><td><b>Adi2 Store Andino</b></td><td class="num">€16.409,20</td><td class="num">€15.582,80</td><td class="num negative">−€826,40</td><td class="num">−€826,40</td><td class="num">€0,00</td></tr><tr><td>Argentina</td><td><b>Adi2 Brand Center Solar</b></td><td class="num">€11.010,40</td><td class="num">€9.847,50</td><td class="num negative">−€1.162,90</td><td class="num">−€1.162,90</td><td class="num">€0,00</td></tr><tr><td>Argentina</td><td><b>Adi2 Store Unicenter</b></td><td class="num">€16.695,60</td><td class="num">€14.859,20</td><td class="num negative">−€1.836,40</td><td class="num">−€1.836,40</td><td class="num">€0,00</td></tr><tr><td>México</td><td><b>Adi2 Store Perisur</b></td><td class="num">€23.490,70</td><td class="num">€21.225,90</td><td class="num negative">−€2.264,80</td><td class="num">−€2.264,80</td><td class="num">€0,00</td></tr><tr><td>Colombia</td><td><b>Adi2 Outlet Oviedo</b></td><td class="num">€16.641,60</td><td class="num">€14.261,50</td><td class="num negative">−€2.380,10</td><td class="num">−€2.380,10</td><td class="num">€0,00</td></tr><tr><td>México</td><td><b>Adi2 Brand Center Andares</b></td><td class="num">€20.872,00</td><td class="num">€17.804,60</td><td class="num negative">−€3.067,40</td><td class="num">−€3.067,40</td><td class="num">€0,00</td></tr></tbody></table></div></div>
+  <footer class="slide-bottom"><span>Fact única · ventas netas EUR · Q1 2026 menos Q1 2025</span><span>09 / 09</span></footer>
+</section></main><nav class="controls" aria-label="Navegación de la presentación"><button id="prev" title="Anterior">←</button><span id="counter">1 / 9</span><button id="next" title="Siguiente">→</button><button id="print" title="Imprimir o guardar PDF">⎙</button></nav><script>
+const slides=[...document.querySelectorAll('.slide')];
+let current=0;
+function show(n) {
+  current=Math.max(0,Math.min(slides.length-1,n));
+  slides.forEach((s,i)=>s.classList.toggle('active',i===current));
+  document.getElementById('counter').textContent=`${current+1} / ${slides.length}`;
+  window.scrollTo(0,0);
+}
+document.getElementById('prev').onclick=()=>show(current-1);
+document.getElementById('next').onclick=()=>show(current+1);
+document.getElementById('print').onclick=()=>window.print();
+document.addEventListener('keydown',e=>{
+  if(['ArrowRight','PageDown',' '].includes(e.key)) {e.preventDefault();show(current+1);}
+  if(['ArrowLeft','PageUp'].includes(e.key)) {e.preventDefault();show(current-1);}
+  if(e.key==='Home') show(0);
+  if(e.key==='End') show(slides.length-1);
+});
+show(0);
+</script></body></html>

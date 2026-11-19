@@ -573,8 +573,58 @@ def main():
     print("\n=== RECONCILIATION ===")
     print(reconciliation.to_string(index=False))
 
-    print("\n=== FACT PREVIEW ===")
-    print(fact.head(10).to_string(index=False))
+        
+    # ==========================================
+    # VISTA PREVIA DE LA TABLA FINAL
+    # ==========================================
+
+    print("\n=== FINAL FACT PREVIEW ===")
+
+    print(f"\nTotal rows: {len(fact):,}")
+    print(f"Total columns: {len(fact.columns)}")
+
+    print("\nRows by channel and fulfillment type:")
+
+    print(
+        fact.groupby(
+            ["channel", "fulfilled_by_store_flag"],
+            dropna=False
+        )
+        .size()
+        .reset_index(name="rows")
+        .to_string(index=False)
+    )
+
+    # Mostrar 3 ejemplos de cada tipo de venta
+    preview = (
+        fact.groupby(
+            ["channel", "fulfilled_by_store_flag"],
+            dropna=False,
+            sort=False
+        )
+        .head(3)
+    )
+
+    print("\nSample of aggregated records:")
+
+    print(
+        preview[
+            [
+                "month",
+                "country",
+                "channel",
+                "store_spot",
+                "group_article",
+                "fulfilled_by_store_flag",
+                "net_qty",
+                "net_sales_eur"
+            ]
+        ].to_string(index=False)
+    )
+
+    print("\nFinal table columns:")
+    print(fact.columns.tolist())
+
 
     print("\nSaved:", destination)
     print("All validations passed.")
