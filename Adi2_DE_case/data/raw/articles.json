@@ -1,0 +1,902 @@
+[
+  {
+    "group_article": "EX7699",
+    "article_name": "Football Tee 7699",
+    "product_division": "APPAREL",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "AJ4228",
+    "article_name": "Football Trail Shoe 4228",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "HE3449",
+    "article_name": "Running Pant 3449",
+    "product_division": "APPAREL",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "VL2212",
+    "article_name": "Running Tee 2212",
+    "product_division": "APPAREL",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "WF5256",
+    "article_name": "Outdoor Runner 5256",
+    "product_division": "FOOTWEAR",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "SX7490",
+    "article_name": "Originals Pant 7490",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "GP6436",
+    "article_name": "Outdoor Short 6436",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "FA1337",
+    "article_name": "Running Cap 1337",
+    "product_division": "ACCESSORIES",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "SY8579",
+    "article_name": "Running Ball 8579",
+    "product_division": "ACCESSORIES",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "DC9522",
+    "article_name": "Outdoor Ball 9522",
+    "product_division": "ACCESSORIES",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "HB3305",
+    "article_name": "Outdoor Socks 3305",
+    "product_division": "ACCESSORIES",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "KR3604",
+    "article_name": "Running Boot 3604",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "RV6194",
+    "article_name": "Football Tee 6194",
+    "product_division": "APPAREL",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "BN8082",
+    "article_name": "Originals Short 8082",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "AA5916",
+    "article_name": "Training Pant 5916",
+    "product_division": "APPAREL",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "WL1305",
+    "article_name": "Outdoor Jersey 1305",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "KL4048",
+    "article_name": "Running Boot 4048",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "ZT9277",
+    "article_name": "Running Boot 9277",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "NS9619",
+    "article_name": "Running Short 9619",
+    "product_division": "APPAREL",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "SK3824",
+    "article_name": "Originals Sneaker 3824",
+    "product_division": "FOOTWEAR",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "LT7203",
+    "article_name": "Originals Short 7203",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "HA6901",
+    "article_name": "Originals Cleat 6901",
+    "product_division": "FOOTWEAR",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "DH5049",
+    "article_name": "Football Cleat 5049",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "JH5906",
+    "article_name": "Training Runner 5906",
+    "product_division": "FOOTWEAR",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "GV6654",
+    "article_name": "Outdoor Tee 6654",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "HL9520",
+    "article_name": "Training Cleat 9520",
+    "product_division": "FOOTWEAR",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "CZ7486",
+    "article_name": "Outdoor Pant 7486",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "RW2154",
+    "article_name": "Outdoor Trail Shoe 2154",
+    "product_division": "FOOTWEAR",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "NG4942",
+    "article_name": "Running Hoodie 4942",
+    "product_division": "APPAREL",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "RW6904",
+    "article_name": "Training Short 6904",
+    "product_division": "APPAREL",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "RD2148",
+    "article_name": "Training Runner 2148",
+    "product_division": "FOOTWEAR",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "SP6439",
+    "article_name": "Originals Jersey 6439",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "AY6051",
+    "article_name": "Football Tee 6051",
+    "product_division": "APPAREL",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "TP7602",
+    "article_name": "Football Bag 7602",
+    "product_division": "ACCESSORIES",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "MP2860",
+    "article_name": "Football Sneaker 2860",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "VD2298",
+    "article_name": "Running Hoodie 2298",
+    "product_division": "APPAREL",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "XB2941",
+    "article_name": "Football Sneaker 2941",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "LP3938",
+    "article_name": "Running Bag 3938",
+    "product_division": "ACCESSORIES",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "ZY8994",
+    "article_name": "Originals Boot 8994",
+    "product_division": "FOOTWEAR",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "SE8654",
+    "article_name": "Outdoor Boot 8654",
+    "product_division": "FOOTWEAR",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "RB6935",
+    "article_name": "Training Boot 6935",
+    "product_division": "FOOTWEAR",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "GC2571",
+    "article_name": "Football Hoodie 2571",
+    "product_division": "APPAREL",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "SR1201",
+    "article_name": "Originals Jacket 1201",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "LG4004",
+    "article_name": "Outdoor Cap 4004",
+    "product_division": "ACCESSORIES",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "EA2022",
+    "article_name": "Outdoor Cleat 2022",
+    "product_division": "FOOTWEAR",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "JE8763",
+    "article_name": "Football Jersey 8763",
+    "product_division": "APPAREL",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "CG2490",
+    "article_name": "Football Cleat 2490",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "AL7694",
+    "article_name": "Running Cleat 7694",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "MX4788",
+    "article_name": "Training Short 4788",
+    "product_division": "APPAREL",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "YN4791",
+    "article_name": "Football Boot 4791",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "KR3699",
+    "article_name": "Football Hoodie 3699",
+    "product_division": "APPAREL",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "SK7275",
+    "article_name": "Football Hoodie 7275",
+    "product_division": "APPAREL",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "HS7569",
+    "article_name": "Running Cleat 7569",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "HS5499",
+    "article_name": "Running Runner 5499",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "KT5452",
+    "article_name": "Originals Boot 5452",
+    "product_division": "FOOTWEAR",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "VN6354",
+    "article_name": "Originals Cleat 6354",
+    "product_division": "FOOTWEAR",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "TC5635",
+    "article_name": "Football Bottle 5635",
+    "product_division": "ACCESSORIES",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "NF3363",
+    "article_name": "Training Jersey 3363",
+    "product_division": "APPAREL",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "SK3050",
+    "article_name": "Football Cleat 3050",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "VH8734",
+    "article_name": "Originals Pant 8734",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "HF4559",
+    "article_name": "Football Trail Shoe 4559",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "BJ6790",
+    "article_name": "Originals Tee 6790",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "XN2601",
+    "article_name": "Running Cleat 2601",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "VY3666",
+    "article_name": "Outdoor Tee 3666",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "DG2314",
+    "article_name": "Football Short 2314",
+    "product_division": "APPAREL",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "FV3398",
+    "article_name": "Football Cleat 3398",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "HB3559",
+    "article_name": "Training Short 3559",
+    "product_division": "APPAREL",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "AH4674",
+    "article_name": "Originals Jacket 4674",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "ZR9939",
+    "article_name": "Training Jacket 9939",
+    "product_division": "APPAREL",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "JD2758",
+    "article_name": "Outdoor Trail Shoe 2758",
+    "product_division": "FOOTWEAR",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "TG4419",
+    "article_name": "Training Runner 4419",
+    "product_division": "FOOTWEAR",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "PY5422",
+    "article_name": "Originals Sneaker 5422",
+    "product_division": "FOOTWEAR",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "EF9478",
+    "article_name": "Football Runner 9478",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "ZP3683",
+    "article_name": "Originals Sneaker 3683",
+    "product_division": "FOOTWEAR",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "HP9502",
+    "article_name": "Outdoor Pant 9502",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "MT5217",
+    "article_name": "Originals Cleat 5217",
+    "product_division": "FOOTWEAR",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "LB1835",
+    "article_name": "Originals Jacket 1835",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "ZE9416",
+    "article_name": "Running Trail Shoe 9416",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "YZ3099",
+    "article_name": "Originals Jacket 3099",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "JZ3181",
+    "article_name": "Training Sneaker 3181",
+    "product_division": "FOOTWEAR",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "GB2060",
+    "article_name": "Outdoor Jersey 2060",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "MK2231",
+    "article_name": "Outdoor Socks 2231",
+    "product_division": "ACCESSORIES",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "CA4177",
+    "article_name": "Training Jersey 4177",
+    "product_division": "APPAREL",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "CR1537",
+    "article_name": "Outdoor Runner 1537",
+    "product_division": "FOOTWEAR",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "KC2652",
+    "article_name": "Running Trail Shoe 2652",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "LR7361",
+    "article_name": "Originals Jersey 7361",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "BF1951",
+    "article_name": "Football Tee 1951",
+    "product_division": "APPAREL",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "LK9915",
+    "article_name": "Football Trail Shoe 9915",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "KK9103",
+    "article_name": "Outdoor Hoodie 9103",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "EW5731",
+    "article_name": "Training Runner 5731",
+    "product_division": "FOOTWEAR",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "WD1237",
+    "article_name": "Originals Pant 1237",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "ZN1274",
+    "article_name": "Outdoor Short 1274",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "AC3535",
+    "article_name": "Football Jacket 3535",
+    "product_division": "APPAREL",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "TM1705",
+    "article_name": "Outdoor Trail Shoe 1705",
+    "product_division": "FOOTWEAR",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "NP2699",
+    "article_name": "Football Boot 2699",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "XK9906",
+    "article_name": "Football Sneaker 9906",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "HW7968",
+    "article_name": "Training Boot 7968",
+    "product_division": "FOOTWEAR",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "WG9962",
+    "article_name": "Outdoor Bag 9962",
+    "product_division": "ACCESSORIES",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "BY4235",
+    "article_name": "Running Hoodie 4235",
+    "product_division": "APPAREL",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "DZ5944",
+    "article_name": "Training Short 5944",
+    "product_division": "APPAREL",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "PH6064",
+    "article_name": "Originals Sneaker 6064",
+    "product_division": "FOOTWEAR",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "YH7258",
+    "article_name": "Outdoor Cleat 7258",
+    "product_division": "FOOTWEAR",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "XZ8176",
+    "article_name": "Training Socks 8176",
+    "product_division": "ACCESSORIES",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "LS2622",
+    "article_name": "Running Cleat 2622",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "LH2870",
+    "article_name": "Training Trail Shoe 2870",
+    "product_division": "FOOTWEAR",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "RJ6573",
+    "article_name": "Outdoor Tee 6573",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "RW1115",
+    "article_name": "Running Runner 1115",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "LT6910",
+    "article_name": "Training Sneaker 6910",
+    "product_division": "FOOTWEAR",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "ZY7289",
+    "article_name": "Running Cleat 7289",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "NK6592",
+    "article_name": "Running Jersey 6592",
+    "product_division": "APPAREL",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "FV6247",
+    "article_name": "Football Short 6247",
+    "product_division": "APPAREL",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "XM7773",
+    "article_name": "Originals Jersey 7773",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "NC7228",
+    "article_name": "Training Jacket 7228",
+    "product_division": "APPAREL",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "XT4195",
+    "article_name": "Running Cleat 4195",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "NP5193",
+    "article_name": "Running Cleat 5193",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "KP5435",
+    "article_name": "Training Pant 5435",
+    "product_division": "APPAREL",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "AK1755",
+    "article_name": "Football Runner 1755",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "HA8654",
+    "article_name": "Originals Pant 8654",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "RT8791",
+    "article_name": "Originals Hoodie 8791",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "RJ5204",
+    "article_name": "Originals Bottle 5204",
+    "product_division": "ACCESSORIES",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "DF5329",
+    "article_name": "Football Trail Shoe 5329",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "GF7084",
+    "article_name": "Outdoor Boot 7084",
+    "product_division": "FOOTWEAR",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "JD7893",
+    "article_name": "Running Hoodie 7893",
+    "product_division": "APPAREL",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "CT3404",
+    "article_name": "Training Runner 3404",
+    "product_division": "FOOTWEAR",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "YL6291",
+    "article_name": "Originals Runner 6291",
+    "product_division": "FOOTWEAR",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "GY2551",
+    "article_name": "Running Tee 2551",
+    "product_division": "APPAREL",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "NN9013",
+    "article_name": "Outdoor Hoodie 9013",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "GD3706",
+    "article_name": "Training Sneaker 3706",
+    "product_division": "FOOTWEAR",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "DT9752",
+    "article_name": "Running Trail Shoe 9752",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "XE8914",
+    "article_name": "Originals Tee 8914",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "NM6776",
+    "article_name": "Running Jersey 6776",
+    "product_division": "APPAREL",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "FY5644",
+    "article_name": "Running Bottle 5644",
+    "product_division": "ACCESSORIES",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "DW6874",
+    "article_name": "Football Tee 6874",
+    "product_division": "APPAREL",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "AL4620",
+    "article_name": "Football Runner 4620",
+    "product_division": "FOOTWEAR",
+    "key_category": "FOOTBALL"
+  },
+  {
+    "group_article": "BX8678",
+    "article_name": "Outdoor Trail Shoe 8678",
+    "product_division": "FOOTWEAR",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "EV5686",
+    "article_name": "Originals Trail Shoe 5686",
+    "product_division": "FOOTWEAR",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "NP4748",
+    "article_name": "Originals Pant 4748",
+    "product_division": "APPAREL",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "HN2701",
+    "article_name": "Outdoor Boot 2701",
+    "product_division": "FOOTWEAR",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "HB6272",
+    "article_name": "Running Trail Shoe 6272",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "ML5254",
+    "article_name": "Outdoor Runner 5254",
+    "product_division": "FOOTWEAR",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "GZ3534",
+    "article_name": "Running Jersey 3534",
+    "product_division": "APPAREL",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "CR9317",
+    "article_name": "Running Boot 9317",
+    "product_division": "FOOTWEAR",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "HW8113",
+    "article_name": "Running Jacket 8113",
+    "product_division": "APPAREL",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "BF6965",
+    "article_name": "Originals Runner 6965",
+    "product_division": "FOOTWEAR",
+    "key_category": "ORIGINALS"
+  },
+  {
+    "group_article": "PP8712",
+    "article_name": "Outdoor Pant 8712",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "CK3436",
+    "article_name": "Outdoor Jacket 3436",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "YK8173",
+    "article_name": "Running Tee 8173",
+    "product_division": "APPAREL",
+    "key_category": "RUNNING"
+  },
+  {
+    "group_article": "VF4287",
+    "article_name": "Training Runner 4287",
+    "product_division": "FOOTWEAR",
+    "key_category": "TRAINING"
+  },
+  {
+    "group_article": "AA8145",
+    "article_name": "Outdoor Short 8145",
+    "product_division": "APPAREL",
+    "key_category": "OUTDOOR"
+  },
+  {
+    "group_article": "VP2201",
+    "article_name": "Outdoor Trail Shoe 2201",
+    "product_division": "FOOTWEAR",
+    "key_category": "OUTDOOR"
+  }
+]

@@ -1,0 +1,6 @@
+source,rows,columns,exact_duplicates,duplicate_key_rows,non_iso_dates,non_numeric_sold_qty,non_numeric_net_sales,return_lines,reversal_lines,store_fulfilled_lines
+retail_sales,4456,16,0,0,394,15,18,145,71,0
+ecom_sales,3523,19,0,0,0,0,0,299,15,420
+stores,12,5,0,0,0,0,0,0,0,0
+articles,150,4,0,0,0,0,0,0,0,0
+fx_rates,3,3,0,0,0,0,0,0,0,0

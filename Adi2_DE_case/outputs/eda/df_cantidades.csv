@@ -1,0 +1,16 @@
+raw_row,transaction_number,line_number,transaction_type,reversal_indicator,original_tran_number,calendar_date,country,store_spot,group_article,size_page,sold_qty,return_qty,return_value,net_qty,net_sales,currency,source,problem_column,original_value
+1599,9404250305002900,2,SALE,,,2025-03-05,MX,099404,HB3559,M,N/A,,,1,1280.0,MXN,retail_sales,sold_qty,N/A
+1697,4962250309002284,3,SALE,,,2025-03-09,MX,074962,EW5731,9,N/A,,,1,2360.0,MXN,retail_sales,sold_qty,N/A
+1797,1956250313001054,1,SALE,,,2025-03-13,MX,041956,HS7569,6,N/A,,,1,2400.0,MXN,retail_sales,sold_qty,N/A
+1890,8517250316002039,1,SALE,,,2025-03-16,AR,068517,JH5906,9,N/A,,,1,131000.0,ARS,retail_sales,sold_qty,N/A
+2045,9404250322002934,1,SALE,,,2025-03-22,MX,099404,FV6247,S,N/A,,,1,1216.0,MXN,retail_sales,sold_qty,N/A
+2250,4962260101002314,1,SALE,,,2026-01-01,MX,074962,JD7893,XL,N/A,,,2,3320.0,MXN,retail_sales,sold_qty,N/A
+2489,2209260111000118,1,SALE,,,2026-01-11,AR,012209,YN4791,7,N/A,,,1,111000.0,ARS,retail_sales,sold_qty,N/A
+2803,5806260124000371,1,SALE,,,2026-01-24,MX,015806,DZ5944,L,N/A,,,1,1060.0,MXN,retail_sales,sold_qty,N/A
+2827,5701260125002673,1,SALE,,,2026-01-25,MX,075701,HW7968,10,N/A,,,1,2200.0,MXN,retail_sales,sold_qty,N/A
+2878,5701260127002680,1,SALE,,,2026-01-27,MX,075701,NS9619,XL,N/A,,,1,1480.0,MXN,retail_sales,sold_qty,N/A
+3433,8517260218002125,1,SALE,,,2026-02-18,AR,068517,XE8914,L,N/A,,,1,23200.0,ARS,retail_sales,sold_qty,N/A
+3671,5701260228002736,1,SALE,,,2026-02-28,MX,075701,EF9478,7,N/A,,,1,2496.0,MXN,retail_sales,sold_qty,N/A
+3851,9404260307003069,1,SALE,,,2026-03-07,MX,099404,NC7228,M,N/A,,,1,840.0,MXN,retail_sales,sold_qty,N/A
+3876,2209260309000185,2,SALE,,,2026-03-09,AR,012209,HN2701,10,N/A,,,1,103000.0,ARS,retail_sales,sold_qty,N/A
+3976,9404260313003079,2,SALE,,,2026-03-13,MX,099404,TM1705,10,N/A,,,2,2336.0,MXN,retail_sales,sold_qty,N/A

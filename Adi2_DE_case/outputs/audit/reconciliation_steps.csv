@@ -1,0 +1,7 @@
+stage,channel,lines,net_qty,eur
+01_clean_source,ECOM,3523,3628,282707.3
+01_clean_source,RETAIL,4456,5140,397121.0
+02_excluded_voided,ECOM,-30,-32,-1851.4
+02_excluded_voided,RETAIL,-142,-162,-11907.6
+03_ecom_to_retail_out,ECOM,-418,-437,-32986.5
+04_ecom_to_retail_in,RETAIL,418,437,32986.5

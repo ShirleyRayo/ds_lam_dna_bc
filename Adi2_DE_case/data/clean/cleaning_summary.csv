@@ -1,0 +1,3 @@
+source,rows,alternative_dates,quantity_reconstructed,sales_amount_repaired,return_rows,reversal_lines,voided_original_lines,voided_lines_total,store_fulfilled_rows
+retail_sales,4456,394,15,18,145,71,71,142,0
+ecom_sales,3523,0,0,0,299,15,15,30,420
