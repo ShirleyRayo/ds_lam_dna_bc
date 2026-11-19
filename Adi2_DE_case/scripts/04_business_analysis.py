@@ -300,7 +300,7 @@ def slide(index, kind, eyebrow, title, subtitle, body, footer):
   <span class="section-label">{safe(eyebrow)} · Q1 2026 VS. Q1 2025</span></div>
   <header class="slide-heading"><h1>{title}</h1><p>{subtitle}</p></header>
   {body}
-  <footer class="slide-bottom"><span>{safe(footer)}</span><span>{index:02d} / 09</span></footer>
+  <footer class="slide-bottom"><span>{safe(footer)}</span><span>{index:02d} / 10</span></footer>
 </section>'''
 
 
@@ -472,6 +472,19 @@ th { color:var(--muted); font-size:11px; letter-spacing:.045em; text-transform:u
 .slide.tight .split-grid { margin:12px 0; }
 @media(max-width:900px) { .stats-2col,.questions-grid,.stat-grid { grid-template-columns:1fr; } }
 @media print { .slide.tight { padding-top:19px; } .stat-tile strong { font-size:20px; } .answer { padding:14px; } .answer h2 { font-size:18px; } .answer p { font-size:11px; } }
+
+
+/* 9. Planes de accion medibles para liderazgo. */
+.strategy-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:18px; }
+.strategy-card { background:var(--card); border:1px solid var(--line); border-top:4px solid var(--lime); border-radius:15px; padding:20px 21px; min-width:0; display:flex; flex-direction:column; gap:9px; }
+.strategy-card h2 { margin:4px 0 7px; font-size:21px; line-height:1.12; letter-spacing:-.025em; }
+.strategy-card p { color:#D7E0EB; font-size:12px; line-height:1.42; margin:0 0 5px; }
+.strategy-card .strategy-kicker { color:var(--lime); font-size:11px; letter-spacing:.09em; font-weight:850; }
+.strategy-card .strategy-label { color:var(--lime); text-transform:uppercase; letter-spacing:.08em; font-size:10px; font-weight:850; margin-top:5px; }
+.strategy-card .strategy-metric { padding:10px 12px; border-radius:9px; background:#222F3B; color:#E4EEF8; font-weight:700; font-size:12px; line-height:1.35; }
+.strategy-conclusion { background:#202C34; border-left:3px solid var(--lime); border-radius:7px; padding:12px 16px; margin-top:14px; font-size:13px; line-height:1.38; }
+@media (max-width:900px) { .strategy-grid { grid-template-columns:1fr; } }
+@media print { .strategy-card { padding:12px; gap:6px; } .strategy-card h2 { font-size:17px; } .strategy-card p { font-size:10px; } .strategy-conclusion { padding:9px; font-size:11px; } }
 
 .annex table { font-size:12px; } .annex td,.annex th { padding:10px 7px; }
 .controls { position:fixed; right:22px; bottom:20px; display:flex; gap:8px; align-items:center; z-index:10; padding:7px 9px; border:1px solid #3B4C5C; background:#1C2631; border-radius:99px; box-shadow:0 10px 25px #0007; }
@@ -734,18 +747,64 @@ th { color:var(--muted); font-size:11px; letter-spacing:.045em; text-transform:u
         body8,
         "Fuente: fact_sellout_performance.parquet · Q1 2026 frente a Q1 2025 · EUR")
 
-    # 9. Annex: all 12 stores. It can be shown during the Q&A.
+    # 9. Tres estrategias propuestas a partir de los hallazgos.
+    # Todos los porcentajes utilizados se calculan a partir de la fact.
     body9 = (
+        '<div class="strategy-grid">'
+        '<article class="strategy-card">'
+        '<div class="strategy-kicker">01 · OMNICANAL</div>'
+        '<h2>Potenciar tiendas como puntos de fulfillment</h2>'
+        '<div class="strategy-metric">' + percent(online_store_pct_2026)
+        + ' de las compras online (EUR) ya se despacha desde tiendas.</div>'
+        '<div class="strategy-label">Implementación</div>'
+        '<p>Probar durante 60–90 días un modelo de despacho desde tiendas seleccionadas, con locales comparables como referencia. Revisar capacidad, inventario y costo por pedido.</p>'
+        '<div class="strategy-label">Cómo medir el éxito</div>'
+        '<p>Pedidos a tiempo, costo por pedido, ventas netas atribuidas y margen de contribución.</p>'
+        '</article>'
+
+        '<article class="strategy-card">'
+        '<div class="strategy-kicker">02 · RECUPERACIÓN RETAIL</div>'
+        '<h2>Recuperar venta presencial y reducir devoluciones</h2>'
+        '<div class="strategy-metric">Presencial ' + percent(floor["growth_pct"], True)
+        + ' · devoluciones Retail ' + percent(rate_2025) + ' → ' + percent(rate_2026) + '.</div>'
+        '<div class="strategy-label">Implementación</div>'
+        '<p>Priorizar tiendas con caídas; investigar cambios por artículo, talla y operación. Pilotar mejoras de surtido, disponibilidad y proceso de devoluciones.</p>'
+        '<div class="strategy-label">Cómo medir el éxito</div>'
+        '<p>Variación de venta presencial comparable, devoluciones / venta bruta y quiebres de inventario.</p>'
+        '</article>'
+
+        '<article class="strategy-card">'
+        '<div class="strategy-kicker">03 · INVERSIÓN FOCALIZADA</div>'
+        '<h2>Priorizar mercados y categorías con mayor potencial</h2>'
+        '<div class="strategy-metric">' + safe(COUNTRY_NAMES.get(leader["country"], leader["country"]))
+        + ' explica ' + percent(country_contrib) + ' del crecimiento; '
+        + safe(division_leader["product_division"]) + ' aporta ' + percent(division_contrib) + '.</div>'
+        '<div class="strategy-label">Implementación</div>'
+        '<p>Ejecutar pruebas de surtido y acciones comerciales por país y categoría, comparando resultados con grupos de control antes de expandir.</p>'
+        '<div class="strategy-label">Cómo medir el éxito</div>'
+        '<p>Ventas incrementales frente al control, margen, rotación y disponibilidad de producto.</p>'
+        '</article></div>'
+        '<div class="strategy-conclusion"><b>Decisión propuesta:</b> aprobar pilotos medibles antes de mover presupuesto entre canales. '
+        'Ventas y crecimiento no equivalen a rentabilidad; se necesitan costos, márgenes y capacidad operativa.</div>'
+    )
+    s9 = slide(9, "tight", "Plan de acción / Próximos 90 días",
+        "Tres estrategias para actuar sobre los hallazgos.",
+        "Iniciativas concretas, con criterios de medición antes de escalar inversión.",
+        body9,
+        "Propuestas para evaluar · no son resultados ya demostrados por las ventas")
+
+    # 10. Annex: all 12 stores. It can be shown during Q&A.
+    body10 = (
         '<div class="panel annex"><h2 class="panel-title">Las 12 tiendas · ventas netas EUR y descomposición del cambio</h2>'
         '<div class="table-scroll"><table><thead><tr><th>País</th><th>Tienda</th><th class="num">Q1 2025</th>'
         '<th class="num">Q1 2026</th><th class="num">Δ total</th><th class="num">Δ presencial</th>'
         '<th class="num">Δ online desde tienda</th></tr></thead><tbody>'
         + store_detail_table(stores) + '</tbody></table></div></div>'
     )
-    s9 = slide(9, "", "Anexo / Validación",
+    s10 = slide(10, "", "Anexo / Validación",
         "Detalle de las 12 tiendas.",
         "Material de respaldo para preguntas del liderazgo; la suma de sus contribuciones coincide con el cambio total Retail.",
-        body9,
+        body10,
         "Fact única · ventas netas EUR · Q1 2026 menos Q1 2025")
 
     js = r'''
@@ -773,9 +832,9 @@ show(0);
         '<!doctype html>\n<html lang="es"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
         '<title>Adi2 LAM | Q1 2026 vs Q1 2025</title><style>' + style
-        + '</style></head><body><main id="deck">' + ''.join([s1,s2,s3,s4,s5,s6,s7,s8,s9])
+        + '</style></head><body><main id="deck">' + ''.join([s1,s2,s3,s4,s5,s6,s7,s8,s9,s10])
         + '</main><nav class="controls" aria-label="Navegación de la presentación">'
-        '<button id="prev" title="Anterior">←</button><span id="counter">1 / 9</span>'
+        '<button id="prev" title="Anterior">←</button><span id="counter">1 / 10</span>'
         '<button id="next" title="Siguiente">→</button>'
         '<button id="print" title="Imprimir o guardar PDF">⎙</button></nav>'
         '<script>' + js + '</script></body></html>'
